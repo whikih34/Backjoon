@@ -1,4 +1,4 @@
-public class Main {
+public class Number10172 {
   public static void main(String[] args) {
     System.out.println("|\\_/|");
     System.out.println("|q p|   /}");
