@@ -25,6 +25,8 @@ print(reward)
 from collections import Counter
 
 a, b, c = map(int, input().split())
+
+# Counter를 만들 때 인자 하나만 받을 수 있기 때문에 리스트(또는 이터러블 or 매핑)를 만들어 여러 개의 키-값 쌍 만들기
 cnt = Counter([a, b, c])
 # ex) Counter({3: 2, 6: 1})
 
@@ -33,6 +35,7 @@ if 3 in cnt.values():   # 모두 같음
 elif 2 in cnt.values(): # 두 개 같음
     # 값이 2인 경우가 있을 때 (k, v)쌍에서 v가 2인 k를 리스트에 넣고 첫 번째 원소 반환하여 same에 대입
     # 리스트 컴프리헨션 (List Comprehension)
+    # items() 키-값 쌍들의 뷰를 돌려주는 메서드
     same = [k for k, v in cnt.items() if v == 2][0]
     reward = 1000 + same * 100
 else:                   # 모두 다름
